@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+About
+{% endblock title %}
+
+
+{% block headerinner %}
+
+<!-- Header Inner -->
+<div class="header-inner">
+	<div class="container">
+		<div class="inner">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-12">
+					<!-- Start Logo -->
+					<div class="logo">
+						<a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="#" /></a>
+					</div>
+					<!-- End Logo -->
+					<!-- Mobile Nav -->
+					<div class="mobile-nav"></div>
+					<!-- End Mobile Nav -->
+				</div>
+				<div class="col-lg-7 col-md-9 col-12">
+					<!-- Main Menu -->
+					<div class="main-menu">
+						<nav class="navigation">
+							<ul class="nav menu">
+								<li><a href="{% url 'index' %}">Home </a></li>
+								<li><a href="{% url 'doctors' %}">Doctors </a></li>
+								<li>
+									<a href="{% url 'specialities' %}">Specialities </a>
+								<li>
+									<a href="{% url 'blog' %}">Blog </a>
+								</li>
+								<li><a href="{% url 'contact' %}">Contact Us</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!--/ End Main Menu -->
+				</div>
+				<div class="col-lg-2 col-12">
+					<div class="get-quote">
+						<a href="{% url 'index' %}#appointment" class="btn">Book Appointment</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/ End Header Inner -->
+
+{% endblock headerinner %}
+
+
+{% block body %}
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+
+            <div class="indicator">
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+
+
+ 
+
+
+
+
+
+    <!-- Start about us -->
+
+    <section class="about-choose section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Quality care for end-to-end treatment</h2>
+                        <img src="{% static 'img/section-img.png' %}" alt="#">
+                        <p>Established in 2007, Mediplus Hospital is a tertiary and quaternary healthcare hospital that
+                            lays its foundation on a ‘Patient first’ ideology. Our hospitals in Thane and Hyderabad
+                            follow a Greenfield strategy for catering end-to-end healthcare needs of our patients. The
+                            first Mediplus hospital is situated in the vicinity of the arterial Eastern Express Highway
+                            in Thane, and offers easy connectivity and accessibility to patients from across Thane.
+                            Going beyond the city, Mediplus Hospital extended its services to the city of Hyderabad in
+                            2017. And now the multi specialty tertiary and quaternary care hospital is present in
+                            Indore, Madhya Pradesh too, with Vishesh Mediplus Hospital established in 2020.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-about">
+                <div class="col-lg-6 col-12">
+                    <!-- Start about Left -->
+                    <div class="choose-left">
+                        <h3>Mission</h3>
+                        <p>Our mission is to create the best infrastructure, technology and support to put Patient
+                            First & foremost and be futuristic, innovative in delivery of healthcare.
+                        </p>
+                    </div>
+                    <!-- End about Left -->
+                </div>
+                <div class="col-lg-6 col-12">
+                    <!-- Start about Rights -->
+                    <div class="choose-right">
+                        <div class="mission-image">
+                            <img src="{% static 'img/mission.webp' %}" alt="#">
+                        </div>
+                    </div>
+                    <!-- End about Rights -->
+                </div>
+            </div>
+            <div class="row-about">
+                <div class="col-lg-6 col-12">
+                    <!-- Start about Rights -->
+                    <div class="choose-right">
+                        <div class="mission-image">
+                            <img src="{% static 'img/vison.webp' %}" alt="#">
+                        </div>
+                    </div>
+                    <!-- End about Rights -->
+                </div>
+                <div class="col-lg-6 col-12">
+                    <!-- Start about Left -->
+                    <div class="choose-left">
+                        <h3>Vision</h3>
+                        <p>Our vision is to be a full-service hospital, operating independently and serving the
+                            end-to-end healthcare needs of patients, right from diagnostics to surgery and
+                            rehabilitation.
+                        </p>
+                    </div>
+                    <!-- End about Left -->
+                </div>
+            </div>
+            <div class="row-about">
+                <div class="col-lg-6 col-12">
+                    <!-- Start about Left -->
+                    <div class="choose-left">
+                        <h3>Mediplus Foundation</h3>
+                        <p>Our foundation stands on the philosophy of putting patients first in everything we do. Our
+                            tertiary care hospitals in Thane, Pune and Indore are completely equipped to provide
+                            complete support to patients along with their families. To win the war against diseases, we
+                            provide the best infrastructure, technology, quality and skill sets. Having practised the
+                            'Patient First' ideology, we at Mediplus Hospital have grown successfully over the years
+                            with philanthropic ideals and a compassionate business model.
+                        </p>
+                    </div>
+                    <!-- End about Left -->
+                </div>
+                <div class="col-lg-6 col-12">
+                    <!-- Start about Rights -->
+                    <div class="choose-right">
+                        <div class="mission-image">
+                            <img src="{% static 'img/foundation.webp' %}" alt="#">
+                        </div>
+                    </div>
+                    <!-- End about Rights -->
+                </div>
+            </div>
+    </section>
+    <!--/ End about us -->
+
+{% endblock body %}
+
+
+
+
+

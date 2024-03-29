@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Specialities {% endblock title %}
+
+{% block headerinner %}
+
+
+<!-- Header Inner -->
+<div class="header-inner">
+    <div class="container">
+        <div class="inner">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-12">
+                    <!-- Start Logo -->
+                    <div class="logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="#" /></a>
+                    </div>
+                    <!-- End Logo -->
+                    <!-- Mobile Nav -->
+                    <div class="mobile-nav"></div>
+                    <!-- End Mobile Nav -->
+                </div>
+                <div class="col-lg-7 col-md-9 col-12">
+                    <!-- Main Menu -->
+                    <div class="main-menu">
+                        <nav class="navigation">
+                            <ul class="nav menu">
+                                <li><a href="{% url 'index' %}">Home </a></li>
+                                <li><a href="{% url 'doctors' %}">Doctors </a></li>
+                                <li class="active">
+                                    <a href="#">Specialities </a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'blog' %}">Blog </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact' %}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--/ End Main Menu -->
+                </div>
+                <div class="col-lg-2 col-12">
+                    <div class="get-quote">
+                        <a href="{% url 'index' %}#appointment" class="btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Header Inner -->
+
+{% endblock headerinner %}
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+{% block body %}
+
+
+<!-- Breadcrumbs -->
+<!-- <div class="breadcrumbs overlay">
+    <div class="container">
+        <div class="bread-inner">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Our Specialities</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- End Breadcrumbs -->
+
+<!-- Single News -->
+<section class="news-single section">
+    <div class="container">
+        <h1>Our Speciality</h1>
+        <div class="row">
+            <div class="col-lg-8 col-12">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="single-main">
+                            <!-- News Head -->
+                            <div class="news-head">
+                                <img src="{% static 'img/blog1.jpg' %}" alt="#" />
+                            </div>
+                            <!-- News Title -->
+                            <h1 class="news-title">
+                                We have more than 20 specility dedicated doctors to give our patients a world class
+                                treatment with empathy.
+                            </h1>
+                            <!-- Meta -->
+
+                            <!-- News Text -->
+                            <div class="news-text">
+                                <p>
+                                    At Mediplus Hospital, we are equipped with over 30 specialty treatments. There are
+                                    specialised departments dedicated to illnesses which are backed by skilled and
+                                    experienced doctors and team of healthcare professionals who are also experts at
+                                    their craft.
+
+
+                                </p>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et
+                                    malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar,
+                                    laoreet dolor quis, pellentesque ante. Cras nulla orci,
+                                    pharetra at dictum consequat, pretium pretium nulla.
+                                    Suspendisse porttitor nunc a sodales tempor. Mauris sed felis
+                                    maximus, interdum metus vel, tincidunt diam. Nam ac risus
+                                    vitae sem vehicula egestas. Sed velit nulla, viverra non
+                                    commod
+                                </p>
+                                <div class="image-gallery">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="single-image">
+                                                <img src="{% static 'img/blog2.jpg' %}" alt="#" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <div class="single-image">
+                                                <img src="{% static 'img/blog3.jpg' %}" alt="#" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Suspendisse facilisis ultricies tortor, nec sollicitudin lorem
+                                    sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque
+                                    habitant morbi tristique senectus et netus et malesuada fames
+                                    ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor
+                                    quis, pellentesque ante. Cras nulla orci, pharetra at dictum
+                                    consequat, pretium pretium nulla. Suspendisse porttitor nunc a
+                                    sodales tempor. Mauris sed felis maximus, interdum metus vel,
+                                    tincidunt diam.
+                                </p>
+
+                            </div>
+                            <div class="blog-bottom">
+                                <!-- Social Share -->
+                                <ul class="social-share">
+                                    <li class="facebook">
+                                        <a href="#"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                                    </li>
+                                    <li class="google-plus">
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                    <li class="pinterest">
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </li>
+                                </ul>
+                                <!-- Next Prev -->
+                                <ul class="prev-next">
+                                    <li class="prev">
+                                        <a href="#"><i class="fa fa-angle-double-left"></i></a>
+                                    </li>
+                                    <li class="next">
+                                        <a href="#"><i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
+                                <!--/ End Next Prev -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="main-sidebar">
+
+                    <!-- Single Widget -->
+                    <div class="single-widget category">
+                        <h3 class="title">Specialities</h3>
+                        <ul class="categor-list">
+                            <li><a href="#">Cardiology</a></li>
+                            <li><a href="#">Diabetology</a></li>
+                            <li><a href="#">Andrology</a></li>
+                            <li><a href="#">Nephrology</a></li>
+                            <li><a href="#">Dermatology</a></li>
+                            <li><a href="#">Oncology</a></li>
+                            <li><a href="#">Dental Care</a></li>
+                            <li><a href="#">Opthalmology</a></li>
+                            <li><a href="#">Neuro Surgeon</a></li>
+                            <li><a href="#">Heart Surgeon</a></li>
+                            <li><a href="#">Orthopaedic</a></li>
+                            <li><a href="#">Paediatric</a></li>
+                            <li><a href="#">Physician</a></li>
+                            <li><a href="#">Gynaecology</a></li>
+                            <li><a href="#">Gastroentorolgy</a></li>
+                            <li><a href="#">General Care</a></li>
+                            <li><a href="#">Hematology</a></li>
+                            <li><a href="#">Rheumatology</a></li>
+                        </ul>
+                    </div>
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <div class="single-widget recent-post">
+                        <h3 class="title">Recent post</h3>
+                        <!-- Single Post -->
+                        <div class="single-post">
+                            <div class="image">
+                                <img src="{% static 'img/blog-sidebar1.jpg' %}" alt="#" />
+                            </div>
+                            <div class="content">
+                                <h5><a href="#">We have annnocuced our new product.</a></h5>
+                                <ul class="comment">
+                                    <li>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>Jan 11,
+                                        2020
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>35
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Post -->
+                        <!-- Single Post -->
+                        <div class="single-post">
+                            <div class="image">
+                                <img src="{% static 'img/blog-sidebar2.jpg' %}" alt="#" />
+                            </div>
+                            <div class="content">
+                                <h5>
+                                    <a href="#">Top five way for solving teeth problems.</a>
+                                </h5>
+                                <ul class="comment">
+                                    <li>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>Mar 05,
+                                        2019
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>59
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Post -->
+                        <!-- Single Post -->
+                        <div class="single-post">
+                            <div class="image">
+                                <img src="{% static 'img/blog-sidebar3.jpg' %}" alt="#" />
+                            </div>
+                            <div class="content">
+                                <h5>
+                                    <a href="#">We provide highly business soliutions.</a>
+                                </h5>
+                                <ul class="comment">
+                                    <li>
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>June 09,
+                                        2019
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>44
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Post -->
+                    </div>
+                    <!--/ End Single Widget -->
+                    <!-- Single Widget -->
+                    <!--/ End Single Widget -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Single News -->
+
+{% endblock body %}

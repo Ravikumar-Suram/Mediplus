@@ -1,0 +1,101 @@
+{% extends 'base.html' %} {% load static %}
+{% static "img" as base %} {% block title %} Search Doctor {% endblock title %}
+{% block headerinner %}
+
+<!-- Header Inner -->
+<div class="header-inner">
+    <div class="container">
+        <div class="inner">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-12">
+                    <!-- Start Logo -->
+                    <div class="logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="#" /></a>
+                    </div>
+                    <!-- End Logo -->
+                    <!-- Mobile Nav -->
+                    <div class="mobile-nav"></div>
+                    <!-- End Mobile Nav -->
+                </div>
+                <div class="col-lg-7 col-md-9 col-12">
+                    <!-- Main Menu -->
+                    <div class="main-menu">
+                        <nav class="navigation">
+                            <ul class="nav menu">
+                                <li><a href="{% url 'index' %}">Home </a></li>
+                                <li class="active">
+                                    <a href="{% url 'doctors' %}">Doctors </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'specialities' %}">Specialities </a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'blog' %}">Blog </a>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--/ End Main Menu -->
+                </div>
+                <div class="col-lg-2 col-12">
+                    <div class="get-quote">
+                        <a href="{% url 'index' %}#appointment" class="btn">Book Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Header Inner -->
+
+{% endblock headerinner %} {% block body %}
+
+<!-- Start Doctors Detail -->
+<div class="header-inner">
+    <div class="container">
+        <div class="inner">
+            <form action="{% url 'search' %}" method="get">
+                <div class="search">
+                    <h4>Find Doctor :</h4>
+                    <div class="doc-search">
+                        <input type="text" name="doctor" placeholder="doctor name" />
+                        <input type="text" name="spec" placeholder="speciality" />
+                        <button type="submit" class="btn">Search</button>
+                    </div>
+                </div>
+            </form>
+
+            {% for d in doctor %}
+            <div class="doctor-table">
+                <div class="doctor-head">
+                    <div class="icon">
+                        <img src="{{d.image.url}}" />
+                    </div>
+                    <div class="doc-text">
+                        <h4 class="title">Dr. {{d.name}}</h4>
+                        <p>
+                            <b>Speciality:</b> {{d.speciality}}<input type="hidden" class="doc_speciality"
+                                value="Urology" />
+                        </p>
+                        <p><b>Designation:</b> {{d.designation}}</p>
+                        <div class="single-info">
+                            <i class="icofont-google-map"></i>
+                            <p>{{d.location}}</p>
+                        </div>
+                        <div class="get-quote">
+                            <a href="#" class="btn">View Profile</a>
+                            <a href="{% url 'index' %}#appointment" class="btn">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- End Doctors Detail  -->
+
+{% endblock body %}
